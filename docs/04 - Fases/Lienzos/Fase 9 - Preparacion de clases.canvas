@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"phase9","type":"text","text":"# Fase 9 — Preparacion de clases\n\nEstado: Pendiente","x":-40,"y":0,"width":420,"height":160},
+		{"id":"accept9","type":"text","text":"## Criterio de aceptacion\nel profesor planifica una clase futura en varios bloques con formato basico y tablas, autoguarda un bloque sin perder el resto, recarga la pagina y recupera todo, y la administracion la consulta sin poder editarla.","x":460,"y":0,"width":420,"height":140},
+		{"id":"bullets9","type":"text","text":"## Contenido\n- CRUD de preparaciones con estados; la preparacion es la cabecera.\n- Bloques ordenados con titulo, fechas opcionales y HTML saneado; limite de 256 KB por bloque.\n- Autoguardado por bloque y guardado completo de cabecera y bloques en una transaccion.\n- Orden compacto de 1 a N, maximo 100 bloques, reordenacion explicita y borrado en cascada.\n- Concurrencia optimista con version en cabecera y bloque; un desajuste responde 409.\n- Vinculo opcional con sesion.\n- Filtros por asignatura, estado y fechas.\n- Consulta administrativa en solo lectura, incluidos borradores.\n- Tests de borrado solo en borrador, saneado de HTML, autoguardado, orden, conflictos de version y aislamiento.","x":-40,"y":200,"width":420,"height":280},
+		{"id":"nosub9","type":"text","text":"Sin sub-fases (fase unica).","x":460,"y":180,"width":420,"height":60}
+	],
+	"edges":[
+		{"id":"e_title_bullets9","fromNode":"phase9","fromSide":"bottom","toNode":"bullets9","toSide":"top"},
+		{"id":"e_title_accept9","fromNode":"phase9","fromSide":"right","toNode":"accept9","toSide":"left"},
+		{"id":"e_nosub9","fromNode":"bullets9","fromSide":"right","toNode":"nosub9","toSide":"left"}
+	]
+}
